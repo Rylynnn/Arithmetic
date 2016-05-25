@@ -1,3 +1,4 @@
+/*最长反链长度等于最小链覆盖*/
 #include <bits/stdc++.h>
 using namespace std;
 int main()

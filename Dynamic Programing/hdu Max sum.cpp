@@ -22,7 +22,6 @@ int main()
             for(i=2;i<=n;i++){
                 point=1;
                 scanf("%d",&a[i]);
-                if(a[i]<0)p++;
                 dodp(i);
             }
             if(k!=1)printf("\n");
@@ -49,7 +48,7 @@ void dodp(int i){
         dp[i].h=dp[i-1].h;
         dp[i].t=i;
     }
-    else if(a[i]==max(dp[i].v+a[i],a[i])){
+    else if(a[i]==max(dp[i-1].v+a[i],a[i])){
         dp[i].v=a[i];
         dp[i].h=i;
         dp[i].t=i;

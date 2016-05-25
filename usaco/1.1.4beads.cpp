@@ -21,7 +21,7 @@ int main()
     b=a+a;
     int maxm=0,i,j,num,p;
     char col;
-    for(i=0;i<a.size();i++){
+    for(i=0;i<a.size();i++){//
         col=a[i];
         num=1,p=0;
         for(j=i+1;j<i+n;j++){
