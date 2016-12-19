@@ -1,21 +1,21 @@
 #include <cstdio>
 #include <cstring>
 #include <string>
-#include <map>
 #include <iostream>
 using namespace std;
-map <char,int> h;
 int main()
 {
-    string a,b;
-    getline(cin,a);
-    getline(cin,b);
-    for(int i=0;i<b.size();i++){
-        h[b[i]]=1;
-    }
-    for(int i=0;i<a.size();i++){
-        if(h[a[i]]!=1){
-           printf("%c",a[i]);
+    string a;
+    int p[10];
+    while(cin>>a){
+        memset(p,0,sizeof(p));
+        for(int i=0;i<a.size();i++){
+            p[a[i]-'0']++;
+        }
+        for(int i=0;i<10;i++){
+            if(p[i]!=0){
+                cout<<i<<':'<<p[i]<<endl;
+            }
         }
     }
     return 0;

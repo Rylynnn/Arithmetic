@@ -1,27 +1,23 @@
-#include <iostream>
-#include <cstring>
 #include <cstdio>
+#include <cmath>
+#include <algorithm>
 using namespace std;
-
-int f[1005];
-
 int main()
 {
-	char a[1005], b[1005];
-	int i, j;
-	while(scanf("%s%s", a + 1, b + 1) != EOF)
-	{
-		memset(f, 0, sizeof(f));
-		for(i = 1; a[i] != '\0'; i++)
-		{
-			for(j = 1;b[j] != '\0'; j++)
-			{
-				if(a[i] == b[j] && f[j] == f[j - 1]) f[j]++;
-				else f[j] = f[j - 1] > f[j] ? f[j - 1] : f[j];
-				cout << f[j ] << endl;
-			}
-		}
-		cout << f[j - 1] << endl;
-	}
-	return 0;
+    int n,a[107],sum,maxm;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        scanf("%d",&a[i]);
+    }
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n-i+1;j++){
+            sum=a[i];
+            maxm=a[i];
+            for(int k=i+1;k<i+j;k++){
+                maxm=max(a[k],maxm);
+                sum=sum^a[k];
+            }
+            printf("%d %d %d %d\n",i,j,sum,sum*maxm);
+        }
+    }
 }

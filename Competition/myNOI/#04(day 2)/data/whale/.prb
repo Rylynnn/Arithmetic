@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problem type="TRA_0_4" maker="pcdialog">
+    <source dir="whale" file="whale" code="100">
+        <language cmd="fpc whale.pas" file="whale.pas"/>
+        <language cmd="g++ -o whale whale.cpp -lm" file="whale.cpp"/>
+        <language cmd="gcc -o whale whale.c -lm" file="whale.c"/>
+    </source>
+    <task output="whale.out" input="whale.in" io="0" checker="全文比较">
+        <subtask score="10">
+            <point in="whale0.in" out="whale0.out" time="3" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="whale1.in" out="whale1.out" time="3" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="whale2.in" out="whale2.out" time="3" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="whale3.in" out="whale3.out" time="3" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="whale4.in" out="whale4.out" time="3" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="whale5.in" out="whale5.out" time="3" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="whale6.in" out="whale6.out" time="3" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="whale7.in" out="whale7.out" time="3" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="whale8.in" out="whale8.out" time="3" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="whale9.in" out="whale9.out" time="3" mem="128"/>
+        </subtask>
+    </task>
+</problem>

@@ -1,0 +1,16 @@
+4 4 10 10
+oxxo
+xoox
+xoox
+oxxo
+xxxxxxxxxx
+oooooooooo
+xxooxxoxxo
+ooooooxoox
+xxxxxxxoox
+xxxxxxoxxo
+xxxxxxxxxx
+xxxxxxxxxx
+xxxxxxxxxx
+xxxxxxxxxx
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problem type="TRA_0_4" maker="pcdialog">
+    <source dir="sunshine" file="sunshine" code="100">
+        <language cmd="fpc sunshine.pas" file="sunshine.pas"/>
+        <language cmd="g++ -o sunshine sunshine.cpp -lm" file="sunshine.cpp"/>
+        <language cmd="gcc -o sunshine sunshine.c -lm" file="sunshine.c"/>
+    </source>
+    <task output="sunshine.out" input="sunshine.in" io="0" checker="全文比较">
+        <subtask score="10">
+            <point in="sunshine0.in" out="sunshine0.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="sunshine1.in" out="sunshine1.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="sunshine2.in" out="sunshine2.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="sunshine3.in" out="sunshine3.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="sunshine4.in" out="sunshine4.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="sunshine5.in" out="sunshine5.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="sunshine6.in" out="sunshine6.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="sunshine7.in" out="sunshine7.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="sunshine8.in" out="sunshine8.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="sunshine9.in" out="sunshine9.out" time="2" mem="128"/>
+        </subtask>
+    </task>
+</problem>

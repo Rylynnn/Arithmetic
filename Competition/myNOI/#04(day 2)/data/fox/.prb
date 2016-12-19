@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problem type="TRA_0_4" maker="pcdialog">
+    <source dir="fox" file="fox" code="100">
+        <language cmd="fpc fox.pas" file="fox.pas"/>
+        <language cmd="g++ -o fox fox.cpp -lm" file="fox.cpp"/>
+        <language cmd="gcc -o fox fox.c -lm" file="fox.c"/>
+    </source>
+    <task output="fox.out" input="fox.in" io="0" checker="全文比较">
+        <subtask score="10">
+            <point in="fox0.in" out="fox0.out" time="10" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="fox1.in" out="fox1.out" time="10" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="fox2.in" out="fox2.out" time="10" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="fox3.in" out="fox3.out" time="10" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="fox4.in" out="fox4.out" time="10" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="fox5.in" out="fox5.out" time="10" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="fox6.in" out="fox6.out" time="10" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="fox7.in" out="fox7.out" time="10" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="fox8.in" out="fox8.out" time="10" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="fox9.in" out="fox9.out" time="10" mem="128"/>
+        </subtask>
+    </task>
+</problem>

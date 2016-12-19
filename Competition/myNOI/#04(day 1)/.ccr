@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<contest version="0.4">
+    <order>
+        <problem>drug</problem>
+        <problem>sunshine</problem>
+        <problem>npc</problem>
+    </order>
+</contest>

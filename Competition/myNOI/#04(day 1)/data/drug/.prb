@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problem type="TRA_0_4" maker="pcdialog">
+    <source dir="drug" file="drug" code="100">
+        <language cmd="fpc drug.pas" file="drug.pas"/>
+        <language cmd="g++ -o drug drug.cpp -lm" file="drug.cpp"/>
+        <language cmd="gcc -o drug drug.c -lm" file="drug.c"/>
+    </source>
+    <task output="drug.out" input="drug.in" io="0" checker="全文比较">
+        <subtask score="10">
+            <point in="drug0.in" out="drug0.out" time="1" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="drug1.in" out="drug1.out" time="1" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="drug2.in" out="drug2.out" time="1" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="drug3.in" out="drug3.out" time="1" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="drug4.in" out="drug4.out" time="1" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="drug5.in" out="drug5.out" time="1" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="drug6.in" out="drug6.out" time="1" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="drug7.in" out="drug7.out" time="1" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="drug8.in" out="drug8.out" time="1" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="drug9.in" out="drug9.out" time="1" mem="128"/>
+        </subtask>
+    </task>
+</problem>

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1471167645 source:d:\arithmetic\competition\ccpc\a.cpp\main.cpp
+	<cstdio>
+	<cstring>
+	<algorithm>
+

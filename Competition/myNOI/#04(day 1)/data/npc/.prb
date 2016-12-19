@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problem type="TRA_0_4" maker="pcdialog">
+    <source dir="npc" file="npc" code="100">
+        <language cmd="fpc npc.pas" file="npc.pas"/>
+        <language cmd="g++ -o npc npc.cpp -lm" file="npc.cpp"/>
+        <language cmd="gcc -o npc npc.c -lm" file="npc.c"/>
+    </source>
+    <task output="npc.out" input="npc.in" io="0" checker="全文比较">
+        <subtask score="10">
+            <point in="npc0.in" out="npc0.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="npc1.in" out="npc1.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="npc2.in" out="npc2.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="npc3.in" out="npc3.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="npc4.in" out="npc4.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="npc5.in" out="npc5.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="npc6.in" out="npc6.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="npc7.in" out="npc7.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="npc8.in" out="npc8.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="npc9.in" out="npc9.out" time="2" mem="128"/>
+        </subtask>
+    </task>
+</problem>

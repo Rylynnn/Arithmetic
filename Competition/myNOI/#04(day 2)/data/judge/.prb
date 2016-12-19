@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problem type="TRA_0_4" maker="pcdialog">
+    <source dir="judge" file="judge" code="100">
+        <language cmd="fpc judge.pas" file="judge.pas"/>
+        <language cmd="g++ -o judge judge.cpp -lm" file="judge.cpp"/>
+        <language cmd="gcc -o judge judge.c -lm" file="judge.c"/>
+    </source>
+    <task output="judge.out" input="judge.in" io="0" checker="全文比较">
+        <subtask score="10">
+            <point in="judge0.in" out="judge0.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="judge1.in" out="judge1.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="judge2.in" out="judge2.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="judge3.in" out="judge3.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="judge4.in" out="judge4.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="judge5.in" out="judge5.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="judge6.in" out="judge6.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="judge7.in" out="judge7.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="judge8.in" out="judge8.out" time="2" mem="128"/>
+        </subtask>
+        <subtask score="10">
+            <point in="judge9.in" out="judge9.out" time="2" mem="128"/>
+        </subtask>
+    </task>
+</problem>
