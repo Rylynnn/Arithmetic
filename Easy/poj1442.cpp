@@ -1,41 +1,58 @@
 /*************************************************************************
-    > File Name: C.cpp
-    > Author: Rylynnn
-    > Mail: jingry0321@gmail.com
-    > Created Time: 2017年07月31日 星期一 22时48分45秒
+  > File Name: poj1442.cpp
+  > Author: Rylynnn
+  > Mail: jingry0321@gmail.com
+  > Created Time: 一  8/28 13:53:51 2017
  ************************************************************************/
-#include <cstdio>
+
 #include <iostream>
-#include <algorithm>
+#include <fstream>
 #include <cmath>
-#define ll long long
+#include <cstdio>
+#include <cstdlib>
+#include <climits>
+#include <cstring>
+#include <iomanip>
+#include <algorithm>
+#include <map>
+#include <set>
+#include <queue>
+#include <deque>
+#include <string>
+#include <functional>
+#define MAX 30007
 using namespace std;
-ll power_mod(ll a, ll b){
-    ll ans = 1;
-    while(b){
-        if(b & 1){
-            ans = ((ans % 1000) * (a % 1000)) % 1000;
+int m, n;
+int a[MAX], u[MAX];
+priority_queue<int, vector<int>, greater<int> > small;
+priority_queue<int, vector<int>, less<int> > big;
+int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    cin >> m >> n;
+    for(int i=1; i<=m; i++){
+        cin >> a[i];
+    }
+    int num = 1;
+    for(int i=1; i<=n; i++){
+        cin >> u[i];
+        while(num <= u[i]){
+            if(!big.empty() && a[num] > big.top()){
+                small.push(a[num]);
+            }
+            else{
+                big.push(a[num]);
+            }
+            num++;       
         }
-        a = (a % 1000) * (a % 1000) % 1000;
-        b = b >> 1;
-    }
-    return ans;
-}
-int main()
-{
-    ll t, n, k, ans2;
-    double ans1;
-    scanf("%lld", &t);
-    ll num = 0;
-    while(t--)
-    {
-        num++;
-        cin >> n >> k;
-        ans2 = power_mod(n, k) % 1000;
-        ans1 = (double)k * log10((double) n);
-        ans1 = ans1 - (ll)ans1;
-        cout << "Case " << num << ": " << (ll)(pow(10, ans1) * 100) << ' ';
-        printf("%03lld\n", ans2);//可以的03lld可以自动填充 
-    }
+        while(big.size() >= i){
+            int now = big.top();
+            big.pop();
+            small.push(now);
+        }
+        cout << small.top() <<endl;
+        big.push(small.top());
+        small.pop();
+    }    
     return 0;
 }
