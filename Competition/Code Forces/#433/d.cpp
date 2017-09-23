@@ -57,15 +57,16 @@ int main(){
     }
     sort(a, a+cnt1, cmp1);
     sort(b, b+cnt2, cmp2);
-    for(int i=0; i<cnt1; ++i){
+    /*for(int i=0; i<cnt1; ++i){
         cout << a[i].d << a[i].f << a[i].t << a[i].c << endl;
     }
     for(int i=0; i<cnt2; ++i){
         cout << b[i].d << b[i].f << b[i].t << b[i].c << endl;
-    }
+    }*/
     int be = 0, ar = 0;
     while(be != cnt1 && ar != cnt2){
-        break;
+        if(a[be].f == b[ar].t){
+            if(a[ar].d - 
     }
     return 0;
 }  

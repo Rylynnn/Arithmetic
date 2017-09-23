@@ -5,55 +5,72 @@
     > Created Time: 2017年08月19日 星期六 15时05分43秒
  ************************************************************************/
 #include <bits/stdc++.h>
+#include <string>
+#include <iostream>
 #define N 1000007
 #define MOD 1000000007
 using namespace std;
-int f[N];
-char a[N],b[N];
-long long ans;
-void kmp(char *s){//打表表示在第i个字符之前字符串tem前缀相同的真子后缀
-    int len = strlen(s);
-    for(int i=1;i<len;i++)
-    {
-        int j=f[i];
-        while(j && s[i]!=s[j])
-            j=f[j];
-        f[i+1]=(s[i]==s[j])?j+1:0;
-    }
+int nxt[N];
+string str, s;
+void getnext(string str)
+{	
+	int i,j;	
+	int slen = str.size();
+	i=-1,j=0;
+	nxt[0] = -1;
+	while (j < slen){
+		if (i == -1||str[i] == str[j]){	
+			++i,++j;
+			nxt[j] = i;
+			/*
+			加速优化匹配的nxt数组，原nxt数组为前缀与后缀相同的最长子串长度，优化后为有可能可以重新匹配的下一个位置
+			if (str[i] != str[j]){
+				nxt[j] = i;
+			}
+			else {
+				nxt[j] = nxt[i];
+			}
+			*/
+		}
+		else {
+			i = nxt[i];
+		}
+	}
 }
-void findl(char *s, char *a){//查找模板串在主串中的最大公共子序列长度，返回主串中的位置
-    int tstr=strlen(s);
-    int mstr=strlen(a);
-    int j=0;
-    a[mstr] = '*';
-    for(int i=0;i<=mstr;i++)
-    {
-        while(j && a[i]!=s[j]) {
-            ans += ((long long)j + 1)*(j)/2;
-            ans %= MOD;
-            j=f[j];
-
+int kmp(string s,string str){	
+	int i, j, num;
+	i = j = num = 0;
+	int n = s.size();
+	int m = str.size();
+	while (i < n){	
+        if(j == m){
+            num++;
+            j = 0;
         }
-        if(a[i]==s[j]) {
-            j++;
-        }
+		if (j == -1||s[i] == str[j]){
+			++i,++j;
+		}
+		else {
+			j = nxt[j];
+		}
+	}
+    if(j == m){
+        num++;
     }
+    return num;
 }
 int main()
 {
     int t;
+	int ans;
+	string a, b;
     scanf("%d", &t);
     while(t--){
         ans = 0;
-        memset(a, 0, sizeof(a));
-        memset(b, 0, sizeof(b));
-        memset(f, 0, sizeof(f));
-        scanf("%s%s",a,b);
-        reverse(a, a+strlen(a));
-        reverse(b, b+strlen(b));
-        kmp(b);
-        findl(b, a);
-        printf("%I64d\n", ans % MOD);
+        cin >> a >> b;
+		getnext(b);
+		ans = kmp(a, b);
+        cout << ans << endl;
     }
     return 0;
 }
